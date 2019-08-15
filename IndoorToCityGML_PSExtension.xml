@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C7f0cb8b2-184f-487d-acfe-135c4be65d1b" priority="normal">
+        <source>
+            <class>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd1817ce1-d498-4eaf-9132-18a8948fd3f8" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C82f650c4-407d-4513-91fc-cd351d7b2390" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="partialboundedBy" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ceeec8544-4c3c-4add-a7dd-a2f5b21b5a7f" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/name"/>
+                <child name="name" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C155fd489-607c-4ce6-9093-8431b70e2097" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="class" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="class" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7591ca6f-d9e4-415d-9eb3-6cbe4d55659c" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C58dc6597-2106-418f-981e-9f2d05445fa1" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="function" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="function" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9ee0f7a3-23c3-48fd-b915-b39b7bc01325" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="id" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2c8b7070-bab5-4a01-aa58-123e9c061d86" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="cellSpaceGeometry" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice_1" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceGeometryType"/>
+                <child name="Geometry3D" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractSolid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="lod4Solid" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/_Solid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9dfd860f-4845-40cf-a270-ca30cd4ff4af" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="ConnectionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="usage" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="usage" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+	<cell relation="eu.esdihumboldt.hale.align.rename" id="C699d0d13-b83a-457e-9baa-2274fc2b6fb3" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ceca6c903-d016-4f84-80e4-3b95ac40802b" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="partialboundedBy" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9eefb3a3-4e4d-4e70-ba4f-8466f598ccbb" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/name"/>
+                <child name="name" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C29f3ffed-cbdc-42db-818b-0455a25a9399" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="class" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="class" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8cc8117f-bf09-4ebb-87f7-068acf351266" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cde603a97-e7ec-465c-a2e3-8ba099475e61" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="function" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="function" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca9aae7cd-eec0-4072-a505-e4ac7da1441b" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="id" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cabb03c2e-3371-4056-94ac-8acc83f1bfdd" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="cellSpaceGeometry" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice_1" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceGeometryType"/>
+                <child name="Geometry3D" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractSolid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="lod4Solid" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/_Solid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C57d7fec6-cdc7-4099-b171-60e61ed80d0c" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="GeneralSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="usage" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="usage" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+	<cell relation="eu.esdihumboldt.hale.align.rename" id="Cfc21a2b0-b0ac-4d94-9619-41d9790a8435" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C15b49f64-90ca-4f33-ba41-3338e86d309d" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="id" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cf72f8add-152f-4602-b7ea-d782f62c5dbb" priority="normal">
+        <source name="var">
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="SizeWidth" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="SizeHeight" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="door height is {SizeHeight} and door width is {SizeWidth}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="Cd6591c97-bebb-4a6d-917a-3ca836204a73" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="DoorHandling" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="doorHandling" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <complexParameter name="lookupTable">
+            <lookup-table xmlns:ns2="http://www.esdi-humboldt.eu/hale/alignment" xmlns="">
+                <entry>
+                    <key value="Left"/>
+                    <value value="Left"/>
+                </entry>
+                <entry>
+                    <key value="Right"/>
+                    <value value="Right"/>
+                </entry>
+            </lookup-table>
+        </complexParameter>
+        <parameter value="fixed:Left" name="notClassifiedAction"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6192ef70-1cf0-468e-8cf0-702f73825a1e" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="Material" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="doorMaterial" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="C569fb82b-337c-40ce-bfd6-23f351b1022c" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="DoorSwing" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="doorSwing" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <complexParameter name="lookupTable">
+            <lookup-table xmlns:ns2="http://www.esdi-humboldt.eu/hale/alignment" xmlns="">
+                <entry>
+                    <key value="Inswing"/>
+                    <value value="Inward"/>
+                </entry>
+                <entry>
+                    <key value="Outswing"/>
+                    <value value="Outward"/>
+                </entry>
+                <entry>
+                    <key value="OUTWARDS"/>
+                    <value value="Outward"/>
+                </entry>
+                <entry>
+                    <key value="INWARDS"/>
+                    <value value="Inward"/>
+                </entry>
+            </lookup-table>
+        </complexParameter>
+        <parameter value="fixed:Inward" name="notClassifiedAction"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cebd647ca-e2e6-4ab8-aec6-e8370d9b47c4" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="FireEscape" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="fireEscapeDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C15c92834-b25c-486c-8ba8-4dfa34af7356" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="LockType" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfDoor"/>
+                <child name="PublicSafetyDoorProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyDoor" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="lockType" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C18a6823c-16d5-46ea-b4d6-e0581e7c8c8d" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/name"/>
+                <child name="name" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfae066f6-c734-401d-88fe-141709560b59" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca07cf379-6f4d-4fef-bbe6-68bcdea6e810" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceBoundaryMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundary"/>
+                <child name="PublicSafetyDoor" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="cellSpaceBoundaryGeometry" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice_1" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceBoundaryGeometryType"/>
+                <child name="geometry3D" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractSurface"/>
+                <child name="Polygon" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_BoundarySurface"/>
+                <child name="InteriorWallSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="opening" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_Opening"/>
+                <child name="Door" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="lod4MultiSurface" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="MultiSurface" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+	<cell relation="eu.esdihumboldt.hale.align.rename" id="Cd1f365db-82cc-430d-b7e7-76120f96e53d" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd42993e1-01de-419b-af29-c0b2dda9137b" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="partialboundedBy" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.classification" id="C06f7ce2f-f253-41eb-8974-a1004f277fb3" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="PSRoomType" ns="http://indoorgml.net/extensions/PSExt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/citygml/building/2.0/_GenericApplicationPropertyOfRoom"/>
+                <child name="PublicSafetyRoomProperty" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="sequence_1" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0//PublicSafetyRoomPropertyType"/>
+                <child name="PublicSafetyRoom" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+                <child name="PublicSafetyRoomType" ns="http://test.schemas.opengis.net/ade/publicsafety/2.0/"/>
+            </property>
+        </target>
+        <complexParameter name="lookupTable">
+            <lookup-table xmlns:ns2="http://www.esdi-humboldt.eu/hale/alignment" xmlns="">
+                <entry>
+                    <key value="Medical"/>
+                    <value value="Medical"/>
+                </entry>
+                <entry>
+                    <key value="Security"/>
+                    <value value="Security"/>
+                </entry>
+            </lookup-table>
+        </complexParameter>
+        <parameter value="null" name="notClassifiedAction"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc3166f7e-ec54-4cd0-a0e3-ad7b20ede7a1" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/name"/>
+                <child name="name" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C527386dc-4da1-47a7-85c2-e6c3013db0f0" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="class" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="class" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdc392035-119c-44a7-9a22-63a70735d543" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb3691adf-5111-4900-bc86-b1bcbef8e0d5" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="function" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="function" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C41eb11c7-e738-471c-81b1-43b1eb23a189" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="id" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd3dac317-f304-4ed5-b55d-baaed11dc7f3" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="cellSpaceGeometry" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice_1" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceGeometryType"/>
+                <child name="Geometry3D" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractSolid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="lod4Solid" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/_Solid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C990ca596-bc62-4a46-9231-3a4ba6c107ba" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="PublicSafetyRoom" ns="http://indoorgml.net/extensions/PSExt"/>
+                <child name="usage" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="usage" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+	<cell relation="eu.esdihumboldt.hale.align.rename" id="C8c3bf3a3-0cfa-4697-af77-c43b79041ad5" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C246bcb6b-a1be-4586-9e91-f68916718d5c" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="partialboundedBy" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7c1e0cef-4fa2-44c4-855b-8077398938c3" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/name"/>
+                <child name="name" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C13f0d058-e20f-4457-800a-cac0f1c560b5" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="class" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="class" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca9dc3a67-8210-4f64-9def-84b266648bed" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="description" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1b47c0ef-d148-4caf-af44-0017f768882d" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="function" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="function" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7d5ae393-0a98-40df-a8c6-3b7500906621" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="id" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9151f4fd-91d9-4ecc-9913-5f4f7c54c560" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="cellSpaceGeometry" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice_1" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpaceGeometryType"/>
+                <child name="Geometry3D" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractSolid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="lod4Solid" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/_Solid"/>
+                <child name="Solid" ns="http://www.opengis.net/gml"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C56115fc4-8279-4c70-ae02-ee4d1ed67c7c" priority="normal">
+        <source>
+            <property>
+                <type name="PrimalSpaceFeaturesType" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="cellSpaceMember" ns="http://www.opengis.net/indoorgml/1.0/core"/>
+                <child name="choice" ns="http://www.opengis.net/indoorgml/1.0/core/CellSpace"/>
+                <child name="TransitionSpace" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+                <child name="usage" ns="http://www.opengis.net/indoorgml/1.0/navigation"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="BuildingType" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="interiorRoom" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="Room" ns="http://www.opengis.net/citygml/building/2.0"/>
+                <child name="usage" ns="http://www.opengis.net/citygml/building/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+</alignment>
