@@ -8,8 +8,8 @@ The following tool is required to conversion IndoorGML PS extension to CityGML P
 ## Processing step for conversion
 0) Install Hale Studio 3.5 and run it
 1) Make a new alignment project 
-2) Import a source schema (IndoorGML Public Safety Extension)
-3) Import a target schema (CityGML Public Safety Extension)
+2) Import a source schema (IndoorGML Public Safety Extension, indoorgmlpsextention.xsd)
+3) Import a target schema (CityGML Public Safety Extension, ADE-PublicSafety-ver03_1_2.xsd)
 4) Import an alignment (IndoorToCityGML_PSExtension.xml in this repository)
 5) Import a source data
 6) Export a transformed data
