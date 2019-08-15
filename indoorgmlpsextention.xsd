@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://indoorgml.net/extensions/PSExt" targetNamespace="http://indoorgml.net/extensions/PSExt" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:core="http://www.opengis.net/indoorgml/1.0/core" xmlns:navi="http://www.opengis.net/indoorgml/1.0/navigation" xmlns:textureext="http://indoorgml.net/extensions/textureext" elementFormDefault="qualified" version="1.0.3">
+	<xs:annotation>
+		<xs:documentation>
+			Extension from IndoorGML 1.0.3 to support public safety features in indoor space.
+			It is aligned with CityGML ADE for public safety defined as a deliverable of NIST Indoor pilot project.
+			2019-02-21 by Ki-Joune Li
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ====================================================================== --> 
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/indoorgml/1.0/core" schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlcore.xsd"/>
+	<xs:import namespace="http://www.opengis.net/indoorgml/1.0/navigation" schemaLocation="http://schemas.opengis.net/indoorgml/1.0/indoorgmlnavi.xsd"/>
+	<xs:import namespace="http://indoorgml.net/extensions/textureext" schemaLocation="http://www.indoorgml.net/extensions/indoorgmltextureextension.xsd"/>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyDoor" type="PublicSafetyDoorType" substitutionGroup="navi:ConnectionBoundary">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyDoor as a subclass of ConnectionBoundary in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyDoorType">
+		<xs:complexContent>
+			<xs:extension base="navi:ConnectionBoundaryType">
+				<xs:sequence>
+					<xs:element name="DoorHandling" type="DoorHandlingType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="DoorSwing" type="DoorSwingType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="FireEscape" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="LockType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Material" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeHeight" type="xs:float" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeWidth" type="xs:float" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyWindow" type="PublicSafetyWindowType" substitutionGroup="navi:ConnectionBoundary">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyWindow as a subclass of ConnectionBoundary in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyWindowType">
+		<xs:complexContent>
+			<xs:extension base="navi:ConnectionBoundaryType">
+				<xs:sequence>
+					<xs:element name="FireEscape" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="LockType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Material" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Openable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeHeight" type="xs:float" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeWidth" type="xs:float" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="WindowHandling" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyHatch" type="PublicSafetyHatchType" substitutionGroup="navi:ConnectionBoundary">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyHatch as a subclass of ConnectionBoundary in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyHatchType">
+		<xs:complexContent>
+			<xs:extension base="navi:ConnectionBoundaryType">
+				<xs:sequence>
+					<xs:element name="FireEscape" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="HatchLocation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="LockType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Material" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Openable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeLength" type="xs:float" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="SizeWidth" type="xs:float" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyRoom" type="PublicSafetyRoomType" substitutionGroup="navi:GeneralSpace">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyRoom as a subclass of GeneralSpace in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyRoomType">
+		<xs:complexContent>
+			<xs:extension base="navi:GeneralSpaceType">
+				<xs:sequence>
+					<xs:element name="PSRoomType" type="psRoomType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyElevator" type="PublicSafetyElevatorType" substitutionGroup="navi:TransitionSpace">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyElevator as a subclass of TransitionSpace in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyElevatorType">
+		<xs:complexContent>
+			<xs:extension base="navi:TransitionSpaceType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyStair" type="PublicSafetyStairType" substitutionGroup="navi:TransitionSpace">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyStair as a subclass of TransitionSpace in Indoor Navigation Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyStairType">
+		<xs:complexContent>
+			<xs:extension base="navi:TransitionSpaceType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="IndoorPOI" type="IndoorPOIType" substitutionGroup="core:State">
+		<xs:annotation>
+			<xs:documentation>IndoorPOI as a subclass of State in Indoor Core Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="IndoorPOIType">
+		<xs:complexContent>
+			<xs:extension base="core:StateType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyIndoorInstallation" type="PublicSafetyIndoorInstallationType" substitutionGroup="IndoorPOI">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyIndoorInstallation as a subclass of IndoorPOI in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyIndoorInstallationType">
+		<xs:complexContent>
+			<xs:extension base="IndoorPOIType">
+				<xs:sequence>
+					<xs:element name="PSLegend" type="PublicSafetyLegend" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyAlarm" type="PublicSafetyAlarmType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyAlarm as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyAlarmType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyDetector" type="PublicSafetyDetectorType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyDetector as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyDetectorType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyEscalator" type="PublicSafetyEscalatorType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyEscalator as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyEscalatorType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyFirePump" type="PublicSafetyFirePumpType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyFirePump as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyFirePumpType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyGenerator" type="PublicSafetyGeneratorType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyGenerator as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyGeneratorType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyKeyBox" type="PublicSafetyKeyBoxType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyKeyBox as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyKeyBoxType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyManual" type="PublicSafetyManualType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyManual as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyManualType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyMedical" type="PublicSafetyMedicalType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyMedical as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyMedicalType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyShutoff" type="PublicSafetyShutoffType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyshutoff as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyShutoffType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetySprinkler" type="PublicSafetySprinklerType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetySprinkler as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetySprinklerType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:element name="PublicSafetyTransformer" type="PublicSafetyTransformerType" substitutionGroup="PublicSafetyIndoorInstallation">
+		<xs:annotation>
+			<xs:documentation>PublicSafetyTransformer as a subclass of PublicSafetyIndoorInstallation in Indoor PSExt Module.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="PublicSafetyTransformerType">
+		<xs:complexContent>
+			<xs:extension base="PublicSafetyIndoorInstallationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ====================================================================== -->
+	<xs:simpleType name="DoorHandlingType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Left"/>
+			<xs:enumeration value="Right"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ====================================================================== -->
+	<xs:simpleType name="DoorSwingType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Outswing"/>
+			<xs:enumeration value="Inswing"/>
+			<xs:enumeration value="INWARDS"/>
+			<xs:enumeration value="OUTWARDS"/>
+			<xs:enumeration value="SLIDE"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ====================================================================== -->
+	<xs:simpleType name="psRoomType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Medical"/>
+			<xs:enumeration value="Security"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ====================================================================== -->
+	<xs:simpleType name="PublicSafetyLegend">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Preplan"/>
+			<xs:enumeration value="FireSuppression"/>
+			<xs:enumeration value="AlarmAndDetectors"/>
+			<xs:enumeration value="FeatureShutoff"/>
+			<xs:enumeration value="VerticalAccessFeature"/>
+			<xs:enumeration value="KeyOrKnowBox"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://test.schemas.opengis.net/ade/publicsafety/2.0/" xmlns:ps="http://test.schemas.opengis.net/ade/publicsafety/2.0/" xmlns:bldg="http://www.opengis.net/citygml/building/2.0" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:gml="http://www.opengis.net/gml" xmlns:gen="http://www.opengis.net/citygml/generics/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" namespace="http://www.opengis.net/gml" />
+  <xs:import schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd" namespace="http://www.opengis.net/citygml/2.0" />
+  <xs:import schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd" namespace="http://www.opengis.net/citygml/building/2.0" />
+  <xs:import schemaLocation="http://schemas.opengis.net/citygml/generics/2.0/generics.xsd" namespace="http://www.opengis.net/citygml/generics/2.0" />
+  <!--================================================================================================================================================-->
+  <!--======================================================== Public Safety Door ====================================================================-->
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyDoorProperty" type="ps:PublicSafetyDoorPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfDoor" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyDoorPropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ps:PublicSafetyDoor" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyDoorType">
+    <xs:complexContent>
+      <xs:extension base="bldg:AbstractOpeningType">
+        <xs:sequence>
+          <xs:element name="doorHandling" type="ps:doorHandling" minOccurs="1" maxOccurs="1" />
+          <xs:element name="doorMaterial" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="doorSwing" type="ps:doorSwing" minOccurs="1" maxOccurs="1" />
+          <xs:element name="fireEscapeDoor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="lockType" type="xs:string" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyDoor" type="ps:PublicSafetyDoorType" substitutionGroup="bldg:_Opening" />
+  <!--================================================================================================================================================-->
+  <!--================================================================================================================================================-->
+  <!--======================================================== Public Safety Window ====================================================================-->
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyWindowProperty" type="ps:PublicSafetyWindowPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfWindow" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyWindowPropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ps:PublicSafetyWindow" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyWindowType">
+    <xs:complexContent>
+      <xs:extension base="bldg:AbstractOpeningType">
+        <xs:sequence>
+          <xs:element name="WindowHandling" type="ps:doorHandling" minOccurs="1" maxOccurs="1" />
+          <xs:element name="WindowMaterial" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="WindowSwing" type="ps:doorSwing" minOccurs="1" maxOccurs="1" />
+          <xs:element name="fireEscapeWindow" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="lockType" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="Openable" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyWindow" type="ps:PublicSafetyWindowType" substitutionGroup="bldg:_Opening" />
+  <!--================================================================================================================================================-->
+  <!--===================================================Codelist for Door Handling==================================================================-->
+  <xs:simpleType name="doorHandling">
+    <xs:annotation>
+      <xs:documentation>
+        This is to decide weather the door is opening from right
+        or left side
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="Right" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--===================================================Codelist for Door Swing====================================================================-->
+  <xs:simpleType name="doorSwing">
+    <xs:annotation>
+      <xs:documentation>
+        This is to decide weather the door is opening to inward,
+        outward or slide
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inward" />
+      <xs:enumeration value="Outward" />
+      <xs:enumeration value="Slide" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--================================================================================================================================================-->
+  <!--======================================================== Public Safety Hatch ===================================================================-->
+  <!--================================================================================================================================================-->
+  <xs:element name="Hatch" type="ps:HatchType" substitutionGroup="bldg:_Opening" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="HatchType">
+    <xs:complexContent>
+      <xs:extension base="bldg:AbstractOpeningType">
+        <xs:sequence>
+          <xs:element name="fireEscapeHatch" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+          <xs:element name="hatchLocation" type="ps:HatchLocation" minOccurs="1" maxOccurs="1" />
+          <xs:element name="hatchMaterial" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="lockType" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="sizeLength" type="xs:int" minOccurs="1" maxOccurs="1" />
+          <xs:element name="sizeWidth" type="xs:int" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:simpleType name="HatchLocation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ceiling" />
+      <xs:enumeration value="Floor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--================================================================================================================================================-->
+  <!--======================================================== PublicSafetyIntBuildingInstallation ===================================================-->
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyIntBuildingInstallationProperty" type="ps:PublicSafetyIntBuildingInstallationPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfIntBuildingInstallation" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyIntBuildingInstallationPropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ps:PublicSafetyIntBuildingInstallation" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyIntBuildingInstallationType">
+    <xs:complexContent>
+      <xs:extension base="core:AbstractCityObjectType">
+        <xs:sequence>
+          <xs:element name="PSInstallationLegend" type="ps:PsLegend" minOccurs="0" maxOccurs="1" />
+          <xs:element name="installedAlarm" type="ps:PublicSafetyAlarmPropertyType" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="knownHazards" type="ps:PublicSafetyHazardPropertyType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PsLegend">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fire Suppresion" />
+      <xs:enumeration value="Preplan" />
+      <xs:enumeration value="AlarmDetectors" />
+      <xs:enumeration value="FeatureShutoff" />
+      <xs:enumeration value="VerticalAccessFeature" />
+      <xs:enumeration value="KeyKnoxBox" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyIntBuildingInstallation" type="ps:PublicSafetyIntBuildingInstallationType" substitutionGroup="core:_CityObject" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyAlarmPropertyType">
+    <xs:sequence>
+      <xs:element name="PublicSafetyAlarm" type="ps:PublicSafetyAlarmType" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyHazardPropertyType">
+    <xs:sequence>
+      <xs:element name="PublicSafetyHazard" type="ps:PublicSafetyHazardType" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyAlarmType">
+    <xs:complexContent>
+      <xs:extension base="gml:AbstractFeatureType">
+        <xs:sequence>
+          <xs:element name="fireAlarm" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyHazardType">
+    <xs:complexContent>
+      <xs:extension base="gml:AbstractFeatureType">
+        <xs:sequence>
+          <xs:element name="hazardLocation" type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="hazardDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <!--======================================================== Public Safety Room ====================================================================-->
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyRoomProperty" type="ps:PublicSafetyRoomPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfRoom" />
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyRoomPropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="ps:PublicSafetyRoom" minOccurs="0" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup" />
+  </xs:complexType>
+  <!--================================================================================================================================================-->
+  <xs:complexType name="PublicSafetyRoomType">
+    <xs:complexContent>
+      <xs:extension base="core:AbstractCityObjectType">
+        <xs:sequence>
+          <xs:element name="PublicSafetyRoomType" type="ps:PsRoomType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PsRoomType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Medical" />
+      <xs:enumeration value="Security" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--================================================================================================================================================-->
+  <xs:element name="PublicSafetyRoom" type="ps:PublicSafetyRoomType" substitutionGroup="core:_CityObject" />
+  <!--================================================================================================================================================-->
+</xs:schema>
